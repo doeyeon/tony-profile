@@ -5,7 +5,7 @@ import { ProfessionalExperience } from '@/types';
 import { motion, MotionStyle, useAnimation } from "framer-motion";
 import Image from 'next/image';
 
-const TopNav = styled(motion.div)`
+const TopNavProfiles = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   padding: 20px;
@@ -17,9 +17,28 @@ const TopNav = styled(motion.div)`
   z-index: 100;
 `;
 
+const TopNavCodebase = styled(motion.div)`
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  margin-left: 40px;
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  right: 100;
+  z-index: 100;
+`;
+
+
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
-  visible: { opacity: 1, y: 0 }
+  visible: { opacity: 1, y: 0 },
+  hover: {
+    scale: 1.05,
+    transition: {
+      duration: 0.3,
+    },
+  },
 };
 
 const CenteredSection = styled.div`
@@ -420,7 +439,16 @@ function GetProfessionalExperience() {
 function ProfessionalExperienceDisplay() {
   return (
     <>
-      <TopNav
+      <TopNavCodebase
+        initial="hidden"
+        animate="visible"
+        whileHover="hover"
+        variants={navVariants}
+        transition={{ duration: 0.5 }}
+      >
+        <a style={{ fontFamily: 'Biotif', fontWeight: 500, fontSize: 16, color: 'black' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">View the codebase for this site here</a>
+      </TopNavCodebase >
+      <TopNavProfiles
         initial="hidden"
         animate="visible"
         variants={navVariants}
@@ -428,7 +456,7 @@ function ProfessionalExperienceDisplay() {
       >
         <a style={{ fontFamily: 'Biotif', fontWeight: 500, fontSize: 20, color: 'black', marginRight: 30 }} href="https://www.linkedin.com/in/tony-yoon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a style={{ fontFamily: 'Biotif', fontWeight: 500, fontSize: 20, color: 'black' }} href="mailto:yoon.tony@outlook.com">Email</a>
-      </TopNav >
+      </TopNavProfiles >
       <div style={{
         height: '100%',
         margin: 0,
