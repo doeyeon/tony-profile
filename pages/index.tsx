@@ -120,6 +120,8 @@ const ImageContainer = styled.div`
   padding-top: 33.33%;
 `;
 
+const fontFamilyStyle = { fontFamily: "'Biotif', 'Segoe UI', 'Roboto', 'Arial', sans-serif" };
+
 const cardVariants = {
   closed: {
     width: "18vh",
@@ -156,20 +158,20 @@ const cardVariants = {
 function IntroductionSection() {
   return (
     <CenteredSection>
-      <h2 style={{ fontFamily: '"Biotif", Arial, sans-serif', fontSize: 40, marginBottom: 30 }}>Hi, I&apos;m Tony!</h2>
-      <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
+      <h2 style={{ ...fontFamilyStyle, fontWeight: 800, fontSize: 40, marginBottom: 30 }}>Hi, I&apos;m Tony!</h2>
+      <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
         Currently looking for full-time roles in
         <br />
         <span style={{ fontWeight: 'bold', color: '#4361ee' }}> software engineering</span> and
         <span style={{ fontWeight: 'bold', color: '#4361ee' }}> product management</span>
       </h3>
-      <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 24, textAlign: 'center' }}>
+      <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, textAlign: 'center' }}>
         Previously @
         <a href="https://www.iata.org/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 800, color: '#4361ee' }}> IATA</a>,
         <a href="https://www.gm.com" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 800, color: '#4361ee' }}> General Motors</a>,
         <a href="https://www.birdandbe.com" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 800, color: '#4361ee' }}> Bird&Be</a>
       </h3>
-      <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 24, textAlign: 'center' }}>
+      <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, textAlign: 'center' }}>
         and Co-founder of
         <a href="https://www.phaserx.ca" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 800, color: '#4361ee' }}> PhaseRx</a>
       </h3>
@@ -241,31 +243,31 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
         >
           <ScrollContainer style={{ overflowY: isOpen ? 'auto' : 'hidden' }}>
 
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 600, fontSize: 20, marginBottom: 5 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 600, fontSize: 20, marginBottom: 5 }}>
               <span style={{ fontWeight: 'bold', color: '#4361ee' }}>Company: </span>
               {experience.company}
             </h3>
 
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 600, fontSize: 20, marginBottom: 5 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 600, fontSize: 20, marginBottom: 5 }}>
               <span style={{ fontWeight: 'bold', color: '#4361ee' }}>Role: </span>
               {experience.role}
             </h3>
 
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 600, fontSize: 20, marginBottom: 5 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 600, fontSize: 20, marginBottom: 5 }}>
               <span style={{ fontWeight: 'bold', color: '#4361ee' }}>Year: </span>
               {experience.year}
             </h3>
 
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 600, fontSize: 20, marginBottom: 20 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 600, fontSize: 20, marginBottom: 20 }}>
               <span style={{ fontWeight: 'bold', color: '#4361ee' }}>Key Skills: </span>
               {experience.skills}
             </h3>
 
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 'bold', fontSize: 24, color: '#4361ee', marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 'bold', fontSize: 24, color: '#4361ee', marginBottom: 10 }}>
               {experience.summary_title}
             </h3>
 
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 20, marginBottom: 20 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 20, marginBottom: 20 }}>
               {experience.summary_paragraph}
             </h3>
             {
@@ -281,25 +283,25 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
                 </ImageContainer>
               )
             }
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 'bold', fontSize: 24, color: '#4361ee', marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 'bold', fontSize: 24, color: '#4361ee', marginBottom: 10 }}>
               {experience.background_title}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 500, fontSize: 22, color: 'black', marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 22, color: 'black', marginBottom: 10 }}>
               {experience.background_subtitle}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
               {experience.background_paragraph}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 500, fontSize: 22, color: 'black', marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 22, color: 'black', marginBottom: 10 }}>
               {experience.about_title}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
               {experience.about_paragraph}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 'bold', fontSize: 24, color: '#4361ee', marginBottom: 10, marginTop: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 'bold', fontSize: 24, color: '#4361ee', marginBottom: 10, marginTop: 10 }}>
               {experience.project_title}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
               {experience.project_summary}
             </h3>
             {
@@ -315,16 +317,16 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
                 </ImageContainer>
               )
             }
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 'bold', fontSize: 20, color: '#4361ee', marginBottom: 10, marginTop: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 'bold', fontSize: 20, color: '#4361ee', marginBottom: 10, marginTop: 10 }}>
               {experience.project_subheading1}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
               {experience.project_desc1}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 'bold', fontSize: 20, color: '#4361ee', marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 'bold', fontSize: 20, color: '#4361ee', marginBottom: 10 }}>
               {experience.project_subheading2}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
               {experience.project_desc2}
             </h3>
             {
@@ -340,10 +342,10 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
                 </ImageContainer>
               )
             }
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 'bold', fontSize: 20, color: '#4361ee', marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 'bold', fontSize: 20, color: '#4361ee', marginBottom: 10 }}>
               {experience.project_subheading3}
             </h3>
-            <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
+            <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 20, marginBottom: 10 }}>
               {experience.project_desc3}
             </h3>
           </ScrollContainer>
@@ -446,7 +448,7 @@ function ProfessionalExperienceDisplay() {
         variants={navVariants}
         transition={{ duration: 0.5 }}
       >
-        <a style={{ fontFamily: 'Biotif', fontWeight: 500, fontSize: 16, color: 'black' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">View the codebase for this site here</a>
+        <a style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 16, color: 'black' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">View the codebase for this site here</a>
       </TopNavCodebase >
       <TopNavProfiles
         initial="hidden"
@@ -454,8 +456,8 @@ function ProfessionalExperienceDisplay() {
         variants={navVariants}
         transition={{ duration: 0.5 }}
       >
-        <a style={{ fontFamily: 'Biotif', fontWeight: 500, fontSize: 20, color: 'black', marginRight: 30 }} href="https://www.linkedin.com/in/tony-yoon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a style={{ fontFamily: 'Biotif', fontWeight: 500, fontSize: 20, color: 'black' }} href="mailto:yoon.tony@outlook.com">Email</a>
+        <a style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 20, color: 'black', marginRight: 30 }} href="https://www.linkedin.com/in/tony-yoon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 20, color: 'black' }} href="mailto:yoon.tony@outlook.com">Email</a>
       </TopNavProfiles >
       <div style={{
         height: '100%',
