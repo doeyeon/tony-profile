@@ -156,7 +156,7 @@ const cardVariants = {
 function IntroductionSection() {
   return (
     <CenteredSection>
-      <h2 style={{ fontFamily: 'Biotif', fontWeight: 900, fontSize: 40, marginBottom: 30 }}>Hi, I&apos;m Tony!</h2>
+      <h2 style={{ fontFamily: '"Biotif", Arial, sans-serif', fontSize: 40, marginBottom: 30 }}>Hi, I&apos;m Tony!</h2>
       <h3 style={{ fontFamily: 'Biotif', fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
         Currently looking for full-time roles in
         <br />
