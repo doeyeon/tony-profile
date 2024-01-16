@@ -158,7 +158,7 @@ const cardVariants = {
 function IntroductionSection() {
   return (
     <CenteredSection>
-      <h2 style={{ ...fontFamilyStyle, fontWeight: 800, fontSize: 40, marginBottom: 30 }}>Hi, I&apos;m Tony!</h2>
+      <h2 style={{ ...fontFamilyStyle, fontWeight: 800, fontSize: 40, marginBottom: 30, textAlign: 'center' }}>Hi, I&apos;m Tony!</h2>
       <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
         Currently looking for full-time roles in
         <br />
