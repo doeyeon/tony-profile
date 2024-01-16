@@ -3,7 +3,7 @@ import { ProfessionalExperience } from '@/types';
 export async function getProfessionalExperience() {
     const exp: ProfessionalExperience[] = [
         {
-            role: "Market Insights",
+            role: "Market Insights Analytics",
             company: "International Air Transport Assocation (IATA)",
             logo: "iata_logo.png",
             diagram1: "iata_diagram1.png",
@@ -27,7 +27,7 @@ export async function getProfessionalExperience() {
             project_desc3: "The culmination of this project was a presentation to IATA's executives and decision-makers – a strategic roadmap detailing how we could enhance our publications and online store. I laid out current and potential future use cases, guided by the insights gleaned from our analysis. This project wasn't just about improvement; it was about setting a new standard for how we support the aviation world through our resources."
         },
         {
-            role: "Business Analyst - Global Innovation",
+            role: "Business Analytics - Global Innovation",
             company: "General Motors",
             logo: "gm_logo.png",
             diagram1: "gm_diagram1.png",
@@ -51,7 +51,7 @@ export async function getProfessionalExperience() {
             project_desc3: ""
         },
         {
-            role: "Software Engineer",
+            role: "Software Engineering",
             company: "Bird&Be",
             logo: "bird&be_logo.png",
             diagram1: "bird&be_diagram1.png",
