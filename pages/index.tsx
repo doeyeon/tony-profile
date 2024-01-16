@@ -120,6 +120,10 @@ const ImageContainer = styled.div`
   padding-top: 33.33%;
 `;
 
+const GifContainer = styled.div`
+  position: relative;
+`;
+
 const fontFamilyStyle = { fontFamily: "'Biotif', 'Segoe UI', 'Roboto', 'Arial', sans-serif" };
 
 const cardVariants = {
@@ -137,7 +141,7 @@ const cardVariants = {
   },
   open: {
     width: "40vw",
-    height: "28vh",
+    height: "35vh",
     borderRadius: "15px",
     opacity: 1,
     transition: {
@@ -272,15 +276,17 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
             </h3>
             {
               experience.company == 'PhaseRx' && (
-                <ImageContainer style={{ marginBottom: 20, marginTop: 20 }}>
+                <GifContainer style={{ marginBottom: 20, marginTop: 20 }}>
                   <Image
                     src={`/diagrams/${experience.diagram1}`}
                     alt="PhaseRx Video"
-                    layout="fill"
+                    layout="responsive"
                     objectFit="contain"
-                    objectPosition="center"
+                    objectPosition="cover"
+                    width={800}
+                    height={600}
                   />
-                </ImageContainer>
+                </GifContainer>
               )
             }
             <h3 style={{ ...fontFamilyStyle, fontWeight: 'bold', fontSize: 24, color: '#4361ee', marginBottom: 10 }}>
