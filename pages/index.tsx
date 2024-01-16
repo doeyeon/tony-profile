@@ -274,7 +274,7 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
               experience.company == 'PhaseRx' && (
                 <ImageContainer style={{ marginBottom: 20, marginTop: 20 }}>
                   <Image
-                    src={`/diagrams/phaserx_demo.gif`}
+                    src={`/diagrams/${experience.diagram1}`}
                     alt="PhaseRx Video"
                     layout="fill"
                     objectFit="contain"
@@ -448,7 +448,7 @@ function ProfessionalExperienceDisplay() {
         variants={navVariants}
         transition={{ duration: 0.5 }}
       >
-        <a style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 16, color: 'black' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">View the codebase for this site here</a>
+        <a style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 16, color: 'black', textAlign: 'center' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">View codebase for this site<br />(link to my github)</a>
       </TopNavCodebase >
       <TopNavProfiles
         initial="hidden"
