@@ -162,12 +162,13 @@ const cardVariants = {
 function IntroductionSection() {
   return (
     <CenteredSection>
-      <h2 style={{ ...fontFamilyStyle, fontWeight: 800, fontSize: 40, marginBottom: 30, textAlign: 'center' }}>Hi, I&apos;m Tony!</h2>
+      <h2 style={{ ...fontFamilyStyle, fontWeight: 800, fontSize: 40, textAlign: 'center' }}>Hi, I&apos;m Tony!</h2>
+      <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 16, marginBottom: 40, textAlign: 'center' }}>B.S (Hons) Computer Science & Math Minor</h3>
       <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
-        Currently looking for full-time roles in
-        <br />
+        Currently seeking full-time roles
+        {/* <br />
         <span style={{ fontWeight: 'bold', color: '#4361ee' }}> software engineering</span> and
-        <span style={{ fontWeight: 'bold', color: '#4361ee' }}> product management</span>
+        <span style={{ fontWeight: 'bold', color: '#4361ee' }}> product management</span> */}
       </h3>
       <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, textAlign: 'center' }}>
         Previously @
