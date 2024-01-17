@@ -75,7 +75,7 @@ export async function getProfessionalExperience() {
             project_desc3: ""
         },
         {
-            role: "Co-Founder",
+            role: "Co-Founding",
             company: "PhaseRx",
             logo: "phaserx_logo.png",
             diagram1: "phaserx_demo.gif",
