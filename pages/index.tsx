@@ -166,9 +166,6 @@ function IntroductionSection() {
       <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 16, marginBottom: 40, textAlign: 'center' }}>B.S (Hons) Computer Science & Math Minor</h3>
       <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
         Currently seeking full-time roles
-        {/* <br />
-        <span style={{ fontWeight: 'bold', color: '#4361ee' }}> software engineering</span> and
-        <span style={{ fontWeight: 'bold', color: '#4361ee' }}> product management</span> */}
       </h3>
       <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, textAlign: 'center' }}>
         Previously @
@@ -466,17 +463,8 @@ function ProfessionalExperienceDisplay() {
         <a style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 20, color: 'black', marginRight: 30 }} href="https://www.linkedin.com/in/tony-yoon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 20, color: 'black' }} href="mailto:yoon.tony@outlook.com">Email</a>
       </TopNavProfiles >
-      <div style={{
-        height: '100%',
-        margin: 0,
-        padding: 0,
-        background: 'linear-gradient(to bottom, #fbf6ee, #d4dfeb)',
-        color: 'black',
-        minHeight: '100vh'
-      }}>
-        <IntroductionSection></IntroductionSection>
-        <GetProfessionalExperience />
-      </div>
+      <IntroductionSection></IntroductionSection>
+      <GetProfessionalExperience />
     </>
   );
 }
