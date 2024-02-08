@@ -46,7 +46,7 @@ export async function getProfessionalExperience() {
             project_subheading1: "Launch of Safety View Software",
             project_desc1: "A defining project I worked on at General Motors was the market launch of Safety View, a SaaS-Based Road Safety Solution, in partnership with INRIX. This software aimed to leverage connected vehicle data to support safe street initiatives across the U.S. A key aspect to my role as a business analyst was to define and communicate technical requirements of this application to stakeholders, including system specifications and use case walkthroughs prior to product launch.",
             project_subheading2: "Partnership Strategy",
-            project_desc2: "As we prepared for launch, I collaborate with the business development team in securing U.S DoT SS4A contracts worth over $3.5 million. A large part of this process was to manage the procurement of RFIs, RFPs, and RFQs - working with INRIX partners to enhance the accuracy and efficacy of the product whitepaper and set GM's technology apart from competitors.",
+            project_desc2: "As we prepared for launch, I collaborated with the business development team in securing U.S DoT SS4A contracts worth over $3.5 million. A large part of this process was to manage the procurement of RFIs, RFPs, and RFQs - working with INRIX partners to enhance the accuracy and efficacy of the product whitepaper and set GM's technology apart from competitors.",
             project_subheading3: "",
             project_desc3: ""
         },
