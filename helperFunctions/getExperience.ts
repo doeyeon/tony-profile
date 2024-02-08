@@ -18,13 +18,13 @@ export async function getProfessionalExperience() {
             about_title: "",
             about_paragraph: "",
             project_title: "Key Project",
-            project_summary: "One standout project I spearheaded at IATA was transforming the way we approached our publications and online store. The goal was to elevate growth and engagement for our aviation industry publications.",
+            project_summary: "One standout project I spearheaded at IATA was transforming the way we approached our strategic partnership program. The goal was to elevate growth and engagement for key stakeholders in our partnership program, specifically targeting 2024 renewals and multi-year contracts.",
             project_subheading1: "Deep Dive into User Research",
-            project_desc1: "The process started with a deep dive into user research which included crafting a set of questions to understand user satisfaction and get a grip on their digital awareness and habits. The focus was on comparing our publications with market standards and thoroughly evaluating the purchasing experience.",
+            project_desc1: "The process started with a deep dive into user research to understand major pain-points and concerns on how information is shared and exchanged in the industry. The focus was on benchmarking our strategic partner benefits and engagement against industry standards and thoroughly evaluating the current partnership strategy.",
             project_subheading2: "Data-Driven Insights",
-            project_desc2: "I explored how to reshape our publications to better aid stakeholders in their daily aviation operations, diving into in-depth analytics and applying a regression model to dissect the key factors influencing satisfaction, and how these elements interplayed.",
+            project_desc2: "I explored how to offer opportunities and stronger value for money for stakeholders, diving into in-depth analytics and applying a regression model to dissect the key drivers influencing satisfaction, and how these elements interplayed.",
             project_subheading3: "Influencing Strategy with Data",
-            project_desc3: "The culmination of this project was a presentation to IATA's executives and decision-makers – a strategic roadmap detailing how we could enhance our publications and online store. I laid out current and potential future use cases, guided by the insights gleaned from our analysis to help set a new standard for how we support the aviation industry through our resources."
+            project_desc3: "The culmination of this project was a discussion with IATA's executives and decision-makers – a strategic roadmap detailing how we could enhance the strategic partnership program. I laid out current and potential future use cases, guided by the insights gleaned from the analysis to help set a new standard for how we support the aviation industry through our resources."
         },
         {
             role: "Business Analytics - Global Innovation",
