@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { ProfessionalExperience } from '@/types';
 import { motion, MotionStyle, useAnimation } from "framer-motion";
 import Image from 'next/image';
+import Head from 'next/head';
 
 const TopNavProfiles = styled(motion.div)`
   display: flex;
@@ -445,7 +446,10 @@ function GetProfessionalExperience() {
 function ProfessionalExperienceDisplay() {
   return (
     <>
-      <link rel="icon" href="/favicon.ico" />
+      <Head>
+        <title>Tony Yoon - Profile</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <TopNavCodebase
         initial="hidden"
         animate="visible"
