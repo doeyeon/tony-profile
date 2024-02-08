@@ -445,6 +445,7 @@ function GetProfessionalExperience() {
 function ProfessionalExperienceDisplay() {
   return (
     <>
+      <link rel="icon" href="/favicon.ico" />
       <TopNavCodebase
         initial="hidden"
         animate="visible"
