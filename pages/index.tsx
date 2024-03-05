@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import axios from 'axios';
+import { getProfessionalExperience } from '@/helperFunctions/getExperience';
 import { useState, useEffect } from 'react';
 import { ProfessionalExperience } from '@/types';
 import { motion, MotionStyle, useAnimation } from "framer-motion";
@@ -163,7 +163,7 @@ const cardVariants = {
 function IntroductionSection() {
   return (
     <CenteredSection>
-      <h2 style={{ ...fontFamilyStyle, fontWeight: 800, fontSize: 40, textAlign: 'center' }}>Hi, I&apos;m Tony!</h2>
+      <h2 style={{ ...fontFamilyStyle, fontWeight: 800, fontSize: 40, textAlign: 'center' }}>Hi, I&apos;m Tony</h2>
       <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 16, marginBottom: 40, textAlign: 'center' }}>B.S (Hons) Computer Science & Math Minor</h3>
       <h3 style={{ ...fontFamilyStyle, fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
         Currently seeking full-time roles
@@ -370,9 +370,8 @@ function ProfessionalExperienceDetails({ experience }: { experience: Professiona
   );
 }
 
-function GetProfessionalExperience() {
-  const [experience, setExperience] = useState<ProfessionalExperience[] | null>(null);
-  const [loading, setIsLoading] = useState(false);
+function GetProfessionalExperience({ experience }: { experience: ProfessionalExperience[] }) {
+  const [isShown, setIsShown] = useState(false);
 
   const buttonVariants: any = {
     hover: {
@@ -391,27 +390,10 @@ function GetProfessionalExperience() {
     },
   };
 
-  const fetchExperience = () => {
-    setIsLoading(true);
-    const url = `/api/experience`;
-    axios
-      .get(url)
-      .then(({ data }) => {
-        setExperience(data);
-        console.log(data);
-        setIsLoading(false);
-      })
-      .catch((e) => {
-        const error = e.toJSON();
-        console.error(error);
-        alert('Something went wrong, please try again');
-        setIsLoading(false);
-      });
-  };
-
+  const toggleExperienceVisibility = () => setIsShown(!isShown);
   return (
     <>
-      {!loading && !experience && (
+      {!isShown && (
         <ButtonContainer>
           <motion.div
             initial="floating"
@@ -419,7 +401,7 @@ function GetProfessionalExperience() {
             whileHover="hover"
             variants={buttonVariants}
             style={{ cursor: 'pointer', display: 'inline-block' }}
-            onClick={fetchExperience}
+            onClick={toggleExperienceVisibility}
           >
             <Image
               src="/buttons/Button1.svg"
@@ -430,7 +412,7 @@ function GetProfessionalExperience() {
           </motion.div>
         </ButtonContainer>
       )}
-      {experience && (
+      {isShown && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -443,7 +425,9 @@ function GetProfessionalExperience() {
   );
 }
 
-function ProfessionalExperienceDisplay() {
+function ProfessionalExperienceDisplay({ experience }: { experience: ProfessionalExperience[] }) {
+  console.log(experience);
+  console.log('hi')
   return (
     <>
       <Head>
@@ -477,9 +461,27 @@ function ProfessionalExperienceDisplay() {
         <a style={{ ...fontFamilyStyle, fontWeight: 500, fontSize: 20, color: 'black' }} href="mailto:yoon.tony@outlook.com">Email</a>
       </TopNavProfiles >
       <IntroductionSection></IntroductionSection>
-      <GetProfessionalExperience />
+      <GetProfessionalExperience experience={experience} />
     </>
   );
+}
+
+//Using getStaticProps() to load all contents when page is rendered
+export async function getStaticProps() {
+  let experienceData: ProfessionalExperience[] = [];
+
+  //Directly imported getProfessionalExperience() to bypass using axios to get 'api/experience'
+  try {
+    experienceData = await getProfessionalExperience();
+  } catch (error) {
+    console.error('Failed to fetch experience data:', error);
+  }
+
+  return {
+    props: {
+      experience: experienceData,
+    }
+  };
 }
 
 export default ProfessionalExperienceDisplay;
