@@ -1,3 +1,5 @@
+// KEEP THIS IN CASE YOU NEED A REAL SERVER-SIDE API CALL
+
 import { getProfessionalExperience } from '@/helperFunctions/getExperience';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
