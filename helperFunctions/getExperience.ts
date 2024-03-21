@@ -24,7 +24,7 @@ export async function getProfessionalExperience() {
             project_subheading2: "Data-Driven Insights",
             project_desc2: "I explored how to offer opportunities and stronger value for money for stakeholders, diving into in-depth analytics and applying a regression model to dissect the key drivers influencing satisfaction, and how these elements interplayed.",
             project_subheading3: "Influencing Strategy with Data",
-            project_desc3: "The culmination of this project was a discussion with IATA's executives and decision-makers – a strategic roadmap detailing how we could enhance the strategic partnership program. I laid out current and potential future use cases, guided by the insights gleaned from the analysis to help set a new standard for how we support the aviation industry through our resources."
+            project_desc3: "The project concluded with a session involving IATA's key decision-makers, where a comprehensive guideline was discussed. This guideline proposed enhancements to the strategic partnership program, drawing on an in-depth analysis of both current and potential future use cases. The insights gained from this analysis were instrumental in setting a new benchmark for supporting the aviation industry, leveraging our resources more effectively and efficiently."
         },
         {
             role: "Business Analytics - Global Innovation",
@@ -44,9 +44,9 @@ export async function getProfessionalExperience() {
             project_title: "Key Project",
             project_summary: "",
             project_subheading1: "Launch of Safety View Software",
-            project_desc1: "A defining project I worked on at General Motors was the market launch of Safety View, a SaaS-Based Road Safety Solution, in partnership with INRIX. This software aimed to leverage connected vehicle data to support safe street initiatives across the U.S. A key aspect to my role as a business analyst was to define and communicate technical requirements of this application to stakeholders, including system specifications and use case walkthroughs prior to product launch.",
+            project_desc1: "A defining project during my time at General Motors was the launch of Safety View, a SaaS-Based Road Safety Solution, in partnership with INRIX. This software aimed to leverage connected vehicle data to support safe street initiatives across the U.S. As business analyst, my primary responsibility was to define and communicate technical requirements of this application to stakeholders, including system specifications and use case walkthroughs prior to product launch.",
             project_subheading2: "Partnership Strategy",
-            project_desc2: "As we prepared for launch, I collaborated with the business development team in securing U.S DoT SS4A contracts worth over $3.5 million. A large part of this process involved managing the procurement of RFIs, RFPs, and RFQs - working with INRIX partners to enhance the accuracy and efficacy of the product whitepaper and setting GM's technology apart from its competitors.",
+            project_desc2: "In the final stages leading up to the launch of Safety View, a critical objective was to secure U.S DoT SS4A contracts, ultimately achieving over $3.5 million in awards. This achievement was the result of a joint effort with the business development team, highlighting a strategic approach to navigating the complex procurement landscape of RFIs, RFPs, and RFQs. Key to this process was the partnership with INRIX and our collaboration to refine the product's whitepaper. This involved a focus on enhancing the accuracy and efficacy of the Safety View software, ensuring that General Motors' technology was distinctly positioned against competitors. The efforts to manage the procurement process and optimize product documentation played a pivotal role in setting a new benchmark for General Motors in the competitive landscape of road safety solutions.",
             project_subheading3: "",
             project_desc3: ""
         },
@@ -66,7 +66,7 @@ export async function getProfessionalExperience() {
             about_title: "",
             about_paragraph: "",
             project_title: "Key Project",
-            project_summary: "A major highlight of my time at Bird&Be was developing tools that enabled our customer support team to search, update, and delete orders internally. While migrating all of our data from BigCommerce to Shopify, I ensured a seamless integration of tools for server-side synchronization which was crucial for effective data management across both platforms.",
+            project_summary: "A major highlight of my time at Bird&Be was building tools to enable our customer support team in searching, updating, and deleting orders internally. The transition of our data from BigCommerce to Shopify underscored the importance of server-side synchronization during development, which was key to maintaining effective data management across both platforms.",
             project_subheading1: "Tech Stack Expertise",
             project_desc1: "My work at Bird&Be involved a tech stack including Node.js, Next.js, TypeScript, React.js, PostgreSQL, Docker, Auth0, and the Shopify Developer Platform.",
             project_subheading2: "",
