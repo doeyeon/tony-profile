@@ -83,7 +83,7 @@ export async function getProfessionalExperience() {
             skills: "what not to do from concept to launch",
             year: "2021",
             summary_title: "Summary",
-            summary_paragraph: "I was involved in developing an e-prescription drop-box platform, designed for the Canadian healthcare industry. My role encompassed a wide range of responsibilities, from working on our product strategy with industry stakeholders, to co-designing and developing the prototype application.",
+            summary_paragraph: "I was involved in developing an e-prescription dropbox platform, designed for the Canadian healthcare industry. My role encompassed a wide range of responsibilities, from working on our product strategy with industry stakeholders, to co-designing and developing the prototype application.",
             background_title: "",
             background_subtitle: "The Vision of PhaseRx",
             background_paragraph: "Our mission was to transform the Canadian healthcare industry by leveraging cloud computing and providing efficient protocols for e-prescriptions. We aimed to bridge the communication gap between healthcare providers and pharmacists. Our platform was designed to decrease the strain of administrative tasks, streamlining communication in healthcare allowing professionals to focus on patient care.",
