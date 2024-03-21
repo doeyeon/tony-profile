@@ -413,7 +413,7 @@ function GetProfessionalExperience({ experience }: { experience: ProfessionalExp
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2.5 }}
+          transition={{ duration: 1.5 }}
         >
           <ProfessionalExperienceDetails experience={experience} />
         </motion.div>
