@@ -35,7 +35,7 @@ export async function getProfessionalExperience() {
             skills: "Go-to-Market Strategy ⋅ Project Management",
             year: "2022",
             summary_title: "Summary",
-            summary_paragraph: "My role in GM's Global Innovation group involved everything from conducting due diligence on V2X data distribution providers to defining the scope of connected vehicle data features and collaborating on the market launch of a cloud-based road safety solution.",
+            summary_paragraph: "My role in GM's Global Innovation group involved everything from conducting due diligence on V2X data distribution providers to defining the scope of connected vehicle data features and collaborating on the launch of a cloud-based road safety solution.",
             background_title: "",
             background_subtitle: "",
             background_paragraph: "",
