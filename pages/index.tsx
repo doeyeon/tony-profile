@@ -115,7 +115,7 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 2vh 0;
 `;
 
 const ImageContainer = styled.div`
@@ -267,6 +267,13 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
               <span style={{ fontWeight: 'bold', color: '#4361ee' }}>Key Skills: </span>
               {experience.skills}
             </h3>
+            {
+              experience.company == 'PhaseRx' && (
+                <ButtonContainer>
+                  <a style={{ fontWeight: 600, fontSize: 18, color: 'black', marginRight: 30 }} href="https://phaserx-casestudy.notion.site/Changing-Prescription-Management-With-A-Dropbox-d215f8f2574046f0bd8eb2ef57a0a1e0?pvs=4" target="_blank" rel="noopener noreferrer">Click to see case study</a>
+                </ButtonContainer>
+              )
+            }
 
             <h3 style={{ fontWeight: 'bold', fontSize: 18, color: '#4361ee', marginBottom: 10 }}>
               {experience.summary_title}
