@@ -72,6 +72,7 @@ const ExperienceSection = styled.section`
   align-items: start;
   padding: 20px;
   margin: 0 auto;
+  margin-bottom: 6vh;
 `;
 
 const Card = styled(motion.div)`
