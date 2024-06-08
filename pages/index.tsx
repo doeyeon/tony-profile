@@ -318,7 +318,8 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
             <h3 style={{ fontWeight: 400, fontSize: 18, marginBottom: 10 }}>
               {experience.project_summary}
             </h3>
-            {
+            {/* KEEP IN CASE YOU NEED IMAGE */}
+            {/* {
               experience.company !== 'PhaseRx' && (
                 <ImageContainer style={{ marginBottom: 18, marginTop: 20 }}>
                   <Image
@@ -330,7 +331,7 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
                   />
                 </ImageContainer>
               )
-            }
+            } */}
             <h3 style={{ fontWeight: 'bold', fontSize: 18, color: '#4361ee', marginBottom: 10, marginTop: 10 }}>
               {experience.project_subheading1}
             </h3>
@@ -343,7 +344,8 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
             <h3 style={{ fontWeight: 400, fontSize: 18, marginBottom: 10 }}>
               {experience.project_desc2}
             </h3>
-            {
+            {/* KEEP IN CASE YOU NEED IMAGE */}
+            {/* {
               experience.company !== 'PhaseRx' && (
                 <ImageContainer style={{ marginBottom: 20, marginTop: 20 }}>
                   <Image
@@ -355,7 +357,7 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
                   />
                 </ImageContainer>
               )
-            }
+            } */}
             <h3 style={{ fontWeight: 'bold', fontSize: 18, color: '#4361ee', marginBottom: 10 }}>
               {experience.project_subheading3}
             </h3>
