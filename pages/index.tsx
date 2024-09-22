@@ -475,7 +475,9 @@ function ProfessionalExperienceDisplay({ experience }: { experience: Professiona
         variants={navVariants}
         transition={{ duration: 0.5 }}
       >
-        <a style={{ fontWeight: 500, fontSize: 20, color: 'black' }} href="mailto:yoon.tony@outlook.com">Email</a>
+        <a style={{ fontWeight: 500, fontSize: 20, color: 'black' }} href="/TonyYoon-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer">Resume</a>
       </TopNavEmail >
       <IntroductionSection></IntroductionSection>
       <GetProfessionalExperience experience={experience} />
