@@ -10,24 +10,39 @@ const TopNavLinkedin = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   padding: 20px;
-  margin-right: 10vw;
+  margin-right: 3vw;
   margin-top: 20px;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    position: static; /* Change to static position */
+    margin: 0; /* Remove any margin */
+    padding: 15px 0; /* Adjust padding for mobile */
+    width: 100%; /* Ensure it takes full width on mobile */
+    justify-content: center; /* Ensure it's centered */
+  }
 `;
 
-const TopNavEmail = styled(motion.div)`
+const TopNavResume = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   padding: 20px;
-  margin-right: 5vw;
+  margin-right: 12vw;
   margin-top: 20px;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    position: static; /* Change to static position */
+    margin: 0; /* Remove any margin */
+    width: 100%; /* Ensure it takes full width on mobile */
+    justify-content: center; /* Ensure it's centered */
+  }
 `;
 
 const TopNavCodebase = styled(motion.div)`
@@ -40,8 +55,24 @@ const TopNavCodebase = styled(motion.div)`
   top: 0;
   right: 100;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    position: static; /* Change to static position */
+    margin: 0; /* Remove any margin */
+    padding: 15px 0; /* Adjust padding for mobile */
+    width: 100%; /* Ensure it takes full width on mobile */
+    justify-content: center; /* Ensure it's centered */
+  }
 `;
 
+const LinksContainer = styled.div`
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+`;
 
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -64,6 +95,7 @@ const CenteredSection = styled.div`
   margin: auto;
   @media (max-width: 768px) {
     width: 80%;
+    padding: 80px 0 20px 0;
   }
 `;
 
@@ -76,6 +108,9 @@ const ExperienceSection = styled.section`
   padding: 20px;
   margin: 0 auto;
   margin-bottom: 6vh;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Card = styled(motion.div)`
@@ -435,7 +470,76 @@ function GetProfessionalExperience({ experience }: { experience: ProfessionalExp
   );
 }
 
+
+function Links() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+  return (
+    <>
+      <LinksContainer>
+        {!isMobile && <TopNavCodebase
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          variants={navVariants}
+          transition={{ duration: 0.5 }}
+        >
+          <a style={{ fontWeight: 500, fontSize: 16, color: 'black', textAlign: 'center' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">Site Codebase<br />(GitHub)</a>
+        </TopNavCodebase >}
+        <TopNavResume
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          variants={navVariants}
+          transition={{ duration: 0.5 }}
+        >
+          <a style={{ fontWeight: 500, fontSize: 20, color: 'black' }} href="/TonyYoon-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer">Resume</a>
+        </TopNavResume>
+        <TopNavLinkedin
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          variants={navVariants}
+          transition={{ duration: 0.5 }}
+        >
+          <a style={{ fontWeight: 500, fontSize: 20, color: 'black' }} href="https://www.linkedin.com/in/tony-yoon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </TopNavLinkedin >
+        {isMobile && <TopNavCodebase
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          variants={navVariants}
+          transition={{ duration: 0.5 }}
+        >
+          <a style={{ fontWeight: 500, fontSize: 16, color: 'black', textAlign: 'center' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">Site Codebase<br />(GitHub)</a>
+        </TopNavCodebase >}
+      </LinksContainer>
+    </>
+  );
+}
+
 function ProfessionalExperienceDisplay({ experience }: { experience: ProfessionalExperience[] }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
   return (
     <>
       <Head>
@@ -450,37 +554,10 @@ function ProfessionalExperienceDisplay({ experience }: { experience: Professiona
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <TopNavCodebase
-        initial="hidden"
-        animate="visible"
-        whileHover="hover"
-        variants={navVariants}
-        transition={{ duration: 0.5 }}
-      >
-        <a style={{ fontWeight: 500, fontSize: 16, color: 'black', textAlign: 'center' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">View codebase for this site<br />(link to my github)</a>
-      </TopNavCodebase >
-      <TopNavLinkedin
-        initial="hidden"
-        animate="visible"
-        whileHover="hover"
-        variants={navVariants}
-        transition={{ duration: 0.5 }}
-      >
-        <a style={{ fontWeight: 500, fontSize: 20, color: 'black', marginRight: 30 }} href="https://www.linkedin.com/in/tony-yoon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </TopNavLinkedin >
-      <TopNavEmail
-        initial="hidden"
-        animate="visible"
-        whileHover="hover"
-        variants={navVariants}
-        transition={{ duration: 0.5 }}
-      >
-        <a style={{ fontWeight: 500, fontSize: 20, color: 'black' }} href="/TonyYoon-Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer">Resume</a>
-      </TopNavEmail >
+      {!isMobile && <Links />}
       <IntroductionSection></IntroductionSection>
-      <GetProfessionalExperience experience={experience} />
+      {isMobile && <Links />}
+      {!isMobile && <GetProfessionalExperience experience={experience} />}
     </>
   );
 }
