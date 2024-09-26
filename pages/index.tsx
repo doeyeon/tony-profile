@@ -521,7 +521,7 @@ function Links() {
           variants={navVariants}
           transition={{ duration: 0.5 }}
         >
-          <a style={{ fontWeight: 500, fontSize: 16, color: 'black', textAlign: 'center' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">Site Codebase<br />(GitHub)</a>
+          <a style={{ fontWeight: 500, fontSize: 20, color: 'black', textAlign: 'center' }} href="https://github.com/doeyeon" target="_blank" rel="noopener noreferrer">GitHub</a>
         </TopNavCodebase >}
       </LinksContainer>
     </>
