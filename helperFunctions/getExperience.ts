@@ -3,7 +3,7 @@ import { ProfessionalExperience } from '@/types';
 export async function getProfessionalExperience() {
     const exp: ProfessionalExperience[] = [
         {
-            role: "Market Insights Analytics",
+            role: "Insights Analytics",
             company: "International Air Transport Assocation (IATA)",
             logo: "iata_logo.png",
             diagram1: "iata_diagram1.png",
