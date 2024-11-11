@@ -1,3 +1,5 @@
+// TODO: move componenets into files & refactor
+
 import styled from 'styled-components';
 import { getProfessionalExperience } from '@/helperFunctions/getExperience';
 import { useState, useEffect } from 'react';
@@ -194,7 +196,7 @@ const cardVariants = {
     }
   },
   hover: {
-    scale: 1.05,
+    scale: 1.18,
     transition: {
       duration: 0.3,
     },
