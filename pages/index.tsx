@@ -161,7 +161,7 @@ const ImageContainer = styled.div`
   width: 100%;
   height: 0;
   position: relative;
-  padding-top: 33.33%;
+  // padding-top: 33.33%;
 `;
 
 const GifContainer = styled.div`
@@ -205,7 +205,7 @@ function IntroductionSection() {
   return (
     <CenteredSection>
       <h2 style={{ fontWeight: 600, fontSize: 50, textAlign: 'center' }}>Hi, I&apos;m Tony</h2>
-      <h3 style={{ fontWeight: 400, fontSize: 22, marginBottom: 40, textAlign: 'center', color: '#495057' }}>B.S (Hons) Computer Science w/ math minor</h3>
+      <h3 style={{ fontWeight: 400, fontSize: 22, marginBottom: 40, textAlign: 'center', color: '#495057' }}>B.S (Hons) Computer Science & Mathematics Minor</h3>
       <h3 style={{ fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
         Currently seeking full-time roles
       </h3>
@@ -309,7 +309,7 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
             {
               experience.company == 'PhaseRx' && (
                 <ButtonContainer>
-                  <a style={{ fontWeight: 600, fontSize: 18, color: 'black', marginRight: 30 }} href="https://phaserx-casestudy.notion.site/Changing-Prescription-Management-With-A-Dropbox-d215f8f2574046f0bd8eb2ef57a0a1e0?pvs=4" target="_blank" rel="noopener noreferrer">Click to see case study</a>
+                  <a style={{ fontWeight: 'bold', fontSize: 18, color: 'blue', marginRight: 30 }} href="https://phaserx-casestudy.notion.site/Changing-Prescription-Management-With-A-Dropbox-d215f8f2574046f0bd8eb2ef57a0a1e0?pvs=4" target="_blank" rel="noopener noreferrer">Click here to view case study</a>
                 </ButtonContainer>
               )
             }
@@ -345,32 +345,40 @@ function ExperienceCard({ experience }: { experience: ProfessionalExperience }) 
             <h3 style={{ fontWeight: 400, fontSize: 18, marginBottom: 10 }}>
               {experience.background_paragraph}
             </h3>
-            <h3 style={{ fontWeight: 500, fontSize: 20, color: 'black', marginBottom: 10 }}>
+            <h3 style={{ fontWeight: 'bold', fontSize: 18, color: '#4361ee', marginBottom: 10 }}>
               {experience.about_title}
             </h3>
             <h3 style={{ fontWeight: 400, fontSize: 18, marginBottom: 10 }}>
-              {experience.about_paragraph}
+              <ul style={{ paddingLeft: 20, margin: 0 }}>
+                {experience.about_list.map((item: any, index) => (
+                  <li key={index} style={{ fontWeight: 400, fontSize: 18 }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </h3>
-            <h3 style={{ fontWeight: 'bold', fontSize: 22, color: '#4361ee', marginBottom: 10, marginTop: 10 }}>
+            <h3 style={{ fontWeight: 'bold', fontSize: 18, color: '#4361ee', marginBottom: 10, marginTop: 10 }}>
               {experience.project_title}
             </h3>
             <h3 style={{ fontWeight: 400, fontSize: 18, marginBottom: 10 }}>
               {experience.project_summary}
             </h3>
             {/* KEEP IN CASE YOU NEED IMAGE */}
-            {/* {
-              experience.company !== 'PhaseRx' && (
+            {
+              experience.company == 'International Air Transport Assocation (IATA)' && (
                 <ImageContainer style={{ marginBottom: 18, marginTop: 20 }}>
                   <Image
                     src={`/diagrams/${experience.diagram1}`}
                     alt={`${experience.company} diagram1`}
-                    layout="fill"
+                    layout="responsive"
+                    width={1512}
+                    height={1090}
                     objectFit="contain"
                     objectPosition="center"
                   />
                 </ImageContainer>
               )
-            } */}
+            }
             <h3 style={{ fontWeight: 'bold', fontSize: 18, color: '#4361ee', marginBottom: 10, marginTop: 10 }}>
               {experience.project_subheading1}
             </h3>
@@ -421,29 +429,28 @@ function ProfessionalExperienceDetails({ experience }: { experience: Professiona
 }
 
 function GetProfessionalExperience({ experience }: { experience: ProfessionalExperience[] }) {
-  const [isShown, setIsShown] = useState(false);
-
-  const buttonVariants: any = {
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.3,
-      },
-    },
-    floating: {
-      y: ["-5%", "5%"],
-      transition: {
-        repeat: Infinity,
-        repeatType: "reverse",
-        duration: 1.5,
-      },
-    },
-  };
-
-  const toggleExperienceVisibility = () => setIsShown(!isShown);
+  //TODO: Reconfigure logic for showing ProfessionalExperience without button
+  // const [isShown, setIsShown] = useState(false);
+  // const buttonVariants: any = {
+  //   hover: {
+  //     scale: 1.05,
+  //     transition: {
+  //       duration: 0.3,
+  //     },
+  //   },
+  //   floating: {
+  //     y: ["-5%", "5%"],
+  //     transition: {
+  //       repeat: Infinity,
+  //       repeatType: "reverse",
+  //       duration: 1.5,
+  //     },
+  //   },
+  // };
+  // const toggleExperienceVisibility = () => setIsShown(!isShown);
   return (
     <>
-      {!isShown && (
+      {/* {!isShown && (
         <ButtonContainer>
           <motion.div
             initial="floating"
@@ -465,7 +472,8 @@ function GetProfessionalExperience({ experience }: { experience: ProfessionalExp
         >
           <ProfessionalExperienceDetails experience={experience} />
         </motion.div>
-      )}
+      )} */}
+      <ProfessionalExperienceDetails experience={experience} />
     </>
   );
 }
@@ -492,7 +500,7 @@ function Links() {
           variants={navVariants}
           transition={{ duration: 0.5 }}
         >
-          <a style={{ fontWeight: 500, fontSize: 16, color: 'black', textAlign: 'center' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">Site Codebase<br />(GitHub)</a>
+          <a style={{ fontWeight: 500, fontSize: 16, color: 'black', textAlign: 'center' }} href="https://github.com/doeyeon/tony-profile/blob/main/pages/index.tsx" target="_blank" rel="noopener noreferrer">Website Codebase<br />(GitHub)</a>
         </TopNavCodebase >}
         <TopNavResume
           initial="hidden"
