@@ -12,7 +12,7 @@ export interface ProfessionalExperience {
     background_subtitle: string;
     background_paragraph: string;
     about_title: string;
-    about_paragraph: string;
+    about_list: Array<string>;
     project_title: string;
     project_summary: string;
     project_subheading1: string;
