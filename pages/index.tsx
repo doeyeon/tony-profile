@@ -209,7 +209,6 @@ function IntroductionSection() {
       <h2 style={{ fontWeight: 600, fontSize: 50, textAlign: 'center' }}>Hi, I&apos;m Tony</h2>
       <h3 style={{ fontWeight: 400, fontSize: 22, marginBottom: 40, textAlign: 'center', color: '#495057' }}>B.S (Hons) Computer Science & Mathematics Minor</h3>
       <h3 style={{ fontWeight: 400, fontSize: 24, marginBottom: 20, textAlign: 'center' }}>
-        Currently seeking full-time roles
       </h3>
       <h3 style={{ fontWeight: 400, fontSize: 24, textAlign: 'center' }}>
         Previously @
