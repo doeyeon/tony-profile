@@ -537,6 +537,16 @@ function Links() {
   );
 }
 
+function PauseSection() {
+  return (
+    <>
+      <CenteredSection>
+        <h2 style={{ fontWeight: 600, fontSize: 50, textAlign: 'center' }}>Hi - This site is down for now</h2>
+      </CenteredSection >
+    </>
+  )
+}
+
 function ProfessionalExperienceDisplay({ experience }: { experience: ProfessionalExperience[] }) {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -563,10 +573,11 @@ function ProfessionalExperienceDisplay({ experience }: { experience: Professiona
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      {!isMobile && <Links />}
+      {/* {!isMobile && <Links />}
       <IntroductionSection></IntroductionSection>
       {isMobile && <Links />}
-      {!isMobile && <GetProfessionalExperience experience={experience} />}
+      {!isMobile && <GetProfessionalExperience experience={experience} />} */}
+      <PauseSection />
     </>
   );
 }
